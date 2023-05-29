@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main">
+        <div id="left">
+            <div id="left-top">
+                <div id="image-div">
+                    <img src="/images/<%=foundUser.image%>" alt="">
+                </div>
+            </div>
+            <div id="left-bottom">
+                <form id="form-id" action="/picture" method="post" enctype="multipart/form-data">
+                    <input type="file" name="pics">
+                    <input type="submit">
+                </form>
+
+                <a href="/images/<%=foundUser.image%>" id="download" download>download</a>
+
+            </div>
+        </div>
+        <div id="right">
+            <div class="btn">
+                <a href="/invert/<%=foundUser.image%>">invert</a>
+                <input type="range">
+            </div>
+            <div class="btn">
+                <a href="/quality/<%=foundUser.image%>">quality</a>
+                <input type="range">
+            </div>
+            <div class="btn">
+                <a href="/greyscale/<%=foundUser.image%>">greyscale</a>
+                <input type="range">
+            </div>
+            <div class="btn">
+                <a href="/blur/<%=foundUser.image%>">blur</a>
+                <input type="range">
+            </div>
+            <div class="btn">
+                <a href="/brightness/<%=foundUser.image%>">brightness</a>
+                <input type="range">
+            </div>
+            <div class="btn">
+                <a href="/contrast/<%=foundUser.image%>">contrast</a>
+                <input type="range">
+            </div>
+            <div class="btn">
+                <a href="/resize/<%=foundUser.image%>">resize</a>
+                <input type="range">
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+<!-- <a href="/quality/<%=foundUser.image%>" class="btn">quality</a>
+<a href="/greyscale/<%=foundUser.image%>" class="btn">greysacale</a>
+
+
+<div class="btn">
+    <a href="/blur/<%=foundUser.image%>">blur &nbsp;&nbsp;</a>
+
+
+</div>
+<a href="/brightness/<%=foundUser.image%>" class="btn">brightness</a>
+<a href="/contrast/<%=foundUser.image%>" class="btn">contrast</a>
+<a href="/resize/<%=foundUser.image%>" class="btn">resize</a> -->
